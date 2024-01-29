@@ -15,6 +15,7 @@ databaseConnection(config.MONGODBURI);
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static("dist"));
 app.use("/api/teachers", teacherRouter);
 app.use("/api/teachers/login", loginRouter);
 export default app;
